@@ -1,13 +1,28 @@
 import React from 'react';
+//import { prependOnceListener } from 'cluster';
+
+function Page({ children }) {
+  return (
+    <div className="page">
+        <div className="content">
+            {children}
+        </div>
+    </div>
+  );
+}
 
 export default function Exercise() {
   return <Friends friends={myFriends} />
 }
 
 function Friends({friends}) {
-  return friends.map(friend => (
-    <FriendProfile key={friend.id} name={friend.name} image={friend.image} />
-  ));
+  return (
+    <Page>
+      {friends.map(friend => (
+      <FriendProfile key={friend.id} name={friend.name} image={friend.image} />
+      ))}
+    </Page>
+  );
 }
 
 

@@ -1,7 +1,7 @@
-function add(a, b) {
+export default function add(a, b) {
   return a + b;
 }
 
-function addThree(a) {
+export function addThree(a) {
   return add(a, 3);
 }

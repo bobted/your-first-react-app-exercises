@@ -5,9 +5,15 @@
 //   an OOP class to act in your code.
 
 export class ThingOne {
-
+    thingOneProperty = 1;
 }
 
-export class ThingTwo {
-  
+export class ThingTwo extends ThingOne {
+    thingTwoProperty = 2;
+
+    addItUp() {
+        return this.thingTwoProperty + this.thingOneProperty;
+    }
+
+    addItUp2 = () => this.thingOneProperty + this.thingTwoProperty;
 }

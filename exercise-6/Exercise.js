@@ -3,10 +3,12 @@ import React from 'react';
 export default class Friends extends React.Component {
   render() {
     return (
-      <div>
+      <React.Fragment>
         <h1>hello, friends!</h1>
-        <FriendProfile name={myFriends[0].name} />
-      </div>
+        {
+          myFriends.map(friend =><FriendProfile name={friend.name} age={friend.age} />)
+        }
+      </React.Fragment>
     );
   }
 }

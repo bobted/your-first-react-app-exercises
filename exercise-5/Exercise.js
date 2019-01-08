@@ -32,6 +32,14 @@ const myFriends = [
 
 export default class Friends extends React.Component {
   render() {
-    return <div />;
+    return <div>
+               <h1 className="friends-title">Hello, Friends!</h1>
+               <h2 className={determineGreetingClass()}>{emphasize(greeting)}</h2>
+               <u1>
+                 {
+                   myFriends.map(friend => <li key={friend.name}>{friend.name}{friend.age ?  ` (${friend.age})` : null}</li>)
+                 }
+               </u1>
+           </div>;
   }
 }
